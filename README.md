@@ -30,7 +30,7 @@ Here I explain my file structure.
 
 
 
-Folder/file         Explanation
+
 
 
 Lib/Controllers     Here I have all have the controllers.
