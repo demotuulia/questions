@@ -8,8 +8,7 @@ namespace Lib\Models;
 class Question  extends \Lib\db {
 
 
-
-	/**
+    /**
      * Constructor
      *
      */
@@ -26,8 +25,8 @@ class Question  extends \Lib\db {
      * @return array    			found rows
      */
 	public function getList($language, $start, $end) {
-		
-
+	
+                    
 		$sql  = '
 		SELECT `RA`.* , `R`.`name`, QT.`title`
 		FROM `respondent_answer` RA
@@ -38,9 +37,9 @@ class Question  extends \Lib\db {
 			AND  `RA`.`question_id` = `QT`.`question_id`
 			AND  `RA`.`question_version` = `QT`.`question_version`
 		)
-		WHERE `RA`.time_stamp >=  "' .  $_REQUEST['start'] . '"
-		AND `RA`.time_stamp <=  "' . $_REQUEST['end'] . '"
-		AND `RA`.language_id =  "' . $_REQUEST['language'] . '"
+		WHERE `RA`.time_stamp >=  "' . $start . '"
+		AND `RA`.time_stamp <=  "' . $end . '"
+		AND `RA`.language_id =  "' . $language . '"
 		ORDER BY `time_stamp` ';
 
 		// debug

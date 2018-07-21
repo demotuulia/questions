@@ -16,15 +16,16 @@ class ListController   extends \Lib\Controller   {
 	public function renderListAction(){
 
 		$question = new \Lib\Models\Question();
-		
+
 		// Read from query string or set defaults (all question in English)
-		$language = isset($this->request->language) ? $this->request->language : 1;
+		$language = isset($this->request->get->language) ? $this->request->get->language : 1;
+               
 		$start = isset($this->request->get->start) ? $this->request->get->start : '2000-01-01 00:00:00';
 		$end = isset($this->request->get->end) ? $this->request->get->end : '3000-01-01 00:00:00';
 
 		// Do query
 		$rows = $question->getList($language, $start, $end);
-
+		
 		// Render
 		$viewParams = [
 			'language' => $language, 
