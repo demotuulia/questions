@@ -33,7 +33,7 @@ Here I explain my file structure.
 
 
 
-Lib/Controllers     Here I have all have the controllers.
+<b>Lib/Controllers</b>     Here I have all have the controllers.
 
 
                     They all inherit from one base controller,
