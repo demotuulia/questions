@@ -23,15 +23,25 @@ Also you it shows the version of the question.
 CODE
 -----------------------------------
 Here I use a simple MVC framework.
-Here I explain my file structure
+
+
+Here I explain my file structure.
+
+
+
 
 Folder/file         Explanation
+
+
 Lib/Controllers     Here I have all have the controllers.
+
+
                     They all inherit from one base controller,
                     which has the common functions for all controllers, 
                     like reading the request parameters, possible login and
                     authorization etc.
  
+
 Lib/Models          Here I include all business rules. For simplicity I don't 
                     use entity classes. All models inherit from the database
                     class. (Which would normally be in entity class)
@@ -43,5 +53,7 @@ Lib/Models          Here I include all business rules. For simplicity I don't
 
 Public              Here I have only one file index.php which calls the bootstrap file.
                     This would also include possible css, Javascript and images.
+
+
 Views               The html templates. I try to keep the files short and put as much
                     possible to partial to keep HTML clear.
